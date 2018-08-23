@@ -259,7 +259,7 @@ p a {
   color: orange;
 }
 #movies a:hover {
-  color: #337ab7;
+  color: white;
 }
 .movies-section {
   padding: 30px;
