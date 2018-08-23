@@ -276,7 +276,7 @@ p a {
   font-weight: normal !important;
 }
 .movies-section .btn a:hover {
-  color: white;
+  color: white !important;
 }
 .movies-section .btn:hover {
   color: orange;
