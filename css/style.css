@@ -1,11 +1,36 @@
-/* Body Style */
+/* Selection Style */
+::-moz-selection { /* Code for Firefox */
+    background: #337ab7;
+}
+::selection {
+    background: #337ab7;
+}
 
+/* Custom Scrollbar */
+/* Width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: lightgrey;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.6);
+} 
+
+/* Body Style */
 body {
 	background-color: white;
 }
 
 /* Background Image for Home Page*/
-
 .background {
   position: relative;
   background-color: black;
@@ -27,7 +52,6 @@ body {
 }
 
 /* Full Screen Menu */
-
 .navToggle {
   position: fixed;
   top: 20px;
@@ -68,7 +92,6 @@ body {
 .menu:after {
   bottom: 10px;
 }
-
 .menuOn {
   background: transparent;
 }
@@ -128,7 +151,6 @@ nav a {
 }
 
 /* Special Buttons */
-
 a {
 	color: white;
 }
@@ -184,7 +206,6 @@ a:hover {
 }
 
 /* Basic Buttons */
-
 .btn {
   font-size: 18px;
   letter-spacing: 6px;
@@ -200,7 +221,6 @@ a:hover {
 }
 
 /* Home */
-
 #home {
   width: 500px;
   height: auto;
@@ -219,7 +239,6 @@ a:hover {
 }
 
 /* About Section */
-
 #about {
 	background-color: rgba(0,0,0,0.9);
 	color: white;
@@ -234,8 +253,19 @@ h2 {
 	padding-top: 50px;
 }
 
-/* Pre-Reg Form */
+/* Forms */
+textarea, input, select {
+    border: 1px solid transparent !important;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+textarea:focus, input:focus {
+    outline: transparent !important;
+}
+select.form-control {
+  color: rgba(0,0,0,0.4) !important;
+}
 
+/* Pre-Reg Form */
 .form-section {
   padding: 30px !important;
   margin: 30px;
@@ -246,7 +276,6 @@ p a {
 }
 
 /* Movies */
-
 #movies-page {
   background-image: url("../img/movies-background-image.jpg");
   background-color: black;
@@ -276,14 +305,13 @@ p a {
   font-weight: normal !important;
 }
 .movies-section .btn a:hover {
-  color: white !important;
+  color: white;
 }
 .movies-section .btn:hover {
   color: orange;
 }
 
 /* Modal */
-
 .modal-body {
   position: relative;
   padding: 0px;
@@ -300,7 +328,13 @@ p a {
 }
 
 /* News */
-
+#news-page {
+  background-image: url("../img/news-background-image.jpg");
+  background-color: black;
+}
+.news {
+  color: white;
+}
 .news-section,
 .movies-section,
 .form-section {
@@ -309,7 +343,7 @@ p a {
   padding: 5px;
   border: 1px solid transparent;
   box-shadow: -15px 20px 15px rgba(0, 0, 0, 0.3); 
-  background-color: rgba(235, 235, 235, 0.9);
+  background-color: rgba(235, 235, 235, 0.5);
 }
 .news-section div {
   width: 80%;
@@ -328,9 +362,15 @@ p a {
 .news-section h2:hover {
   color: #337ab7;
 }
+#n-click {
+  font-weight: bold;
+  color: #337ab7;
+}
+#n-click:hover {
+  color: white;
+}
 
 /* Contact */
-
 #contact-page {
   background: black;
 }
@@ -347,6 +387,7 @@ p a {
 .form-section {
   border-radius: 20px;
   color: rgba(0,0,0,0.6);
+  background-color: rgba(235, 235, 235, 0.9) !important;
 }
 #contact a {
   color: white;
@@ -357,7 +398,6 @@ p a {
 }
 
 /* Social Media */
-
 .social-media {
   text-align: center;
   padding: 30px 0 30px 0;
@@ -387,8 +427,7 @@ i {
   color: lightgray;
 }
 
-/* Media only for Mobile Screen */
-
+/* Mobile Screens */
 @media screen and (max-width: 670px) {
   #home {
     width: 80%;
@@ -444,8 +483,7 @@ i {
   }
 }
 
-/* Media only for Tablet Screen */
-
+/* Tablet Screens */
 @media screen and (min-width: 670px) and (max-width: 1075px) {
   #home {
     width: 70%;
